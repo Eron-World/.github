@@ -1,158 +1,152 @@
 <div align="center">
 
-<!-- ═══════════════════════════ COMMAND BANNER ═══════════════════════════ -->
+![UNCLASSIFIED // ERON WORLD // FOR OFFICIAL USE ONLY](https://img.shields.io/badge/UNCLASSIFIED%20%2F%2F%20ERON%20WORLD%20%2F%2F%20FOR%20OFFICIAL%20USE%20ONLY-007a33?style=for-the-badge&labelColor=007a33)
 
-# ◣ ⬛ E R O N · W O R L D ⬛ ◢
+# ERON WORLD
 
-### ▰▰▰▱ CONSTRUCTION COMMAND · DIGITAL OPERATIONS DIVISION ▱▰▰▰
+### CENTRAL SYSTEMS DIVISION
 
-![CLASSIFICATION](https://img.shields.io/badge/CLASSIFICATION-OPERATIONAL-4b5320?style=for-the-badge&labelColor=1b1b1b)
-![THEATER](https://img.shields.io/badge/THEATER-B2B_CONSTRUCTION-556b2f?style=for-the-badge&labelColor=1b1b1b)
-![POSTURE](https://img.shields.io/badge/POSTURE-FORWARD_DEPLOYING-b8860b?style=for-the-badge&labelColor=1b1b1b)
-![SECTOR](https://img.shields.io/badge/SECTOR-AZURE_CLOUD-2f4f4f?style=for-the-badge&labelColor=1b1b1b)
+**DIGITAL OPERATIONS — CONSTRUCTION MANAGEMENT PLATFORM**
 
-> _“We don’t pour the concrete. We command the systems that do.”_
+![PROGRAM](https://img.shields.io/badge/PROGRAM-ACTIVE-007a33?style=for-the-badge&labelColor=1f1f1f)
+![ENVIRONMENT](https://img.shields.io/badge/ENVIRONMENT-AZURE_CLOUD-2d3436?style=for-the-badge&labelColor=1f1f1f)
+![AUTHORIZATION](https://img.shields.io/badge/AUTHORIZATION_TO_OPERATE-CURRENT-007a33?style=for-the-badge&labelColor=1f1f1f)
 
 </div>
 
----
-
-## ★ THEATER OF OPERATIONS
-
-**MISSION DIRECTIVE —** Decommission the legacy Power Platform portal and seize the modern stack: a sovereign, containerized, cloud-native platform for B2B construction management. Two divisions hold the line — one at the **front** (the cockpit the crews operate), one in the **core** (the engine that moves the data).
-
 ```
-┌─ SITREP // THEATER STATUS ───────────────────────────────────────────────┐
-│                                                                           │
-│   AO ............. Azure Cloud  ·  SWA · Functions · Dataverse · SQL       │
-│   FRONT .......... eron-client-sv        [ SvelteKit · TypeScript ]        │
-│   CORE ........... eron-backend-csharp   [ .NET · Clean Architecture ]     │
-│   SUPPLY LINES ... Microsoft Entra · Microsoft Graph · Trimble Connect     │
-│   POSTURE ........ ACTIVE — continuous deployment, fortified quality gates │
-│   READINESS ...... 🟩 GREEN  ·  all divisions operational                  │
-│                                                                           │
-└───────────────────────────────────────────────────────────────────────────┘
+DOCUMENT CONTROL
+──────────────────────────────────────────────────────────────────────
+  DOCUMENT ............ Platform Systems Register
+  DESIGNATOR .......... EW-SR-001
+  REVISION ............ 2026.06 (REV C)
+  PREPARING OFFICE .... Central Systems Division
+  AUTHORITY ........... Office of the Chief Engineer
+  DISTRIBUTION ........ Internal. Repository access governed by role.
+  CLASSIFICATION ...... UNCLASSIFIED // FOR OFFICIAL USE ONLY
+──────────────────────────────────────────────────────────────────────
 ```
 
 ---
+
+## 1 — PROGRAM OVERVIEW
+
+The Central Systems Division maintains the digital platform supporting Eron World's B2B construction-management operations. The standing mandate is the orderly decommission of the legacy Power Platform portal and the establishment of a sovereign, cloud-native successor on Microsoft Azure.
+
+The platform is recorded as two systems: a client-facing application (**EW-S1**) and a core services backend (**EW-S2**). Both are under active development, governed by mandatory assurance gates, and deployed under change control.
+
+---
+
+## 2 — SYSTEM INVENTORY
+
+| DESIGNATOR | SYSTEM                 | FUNCTION              | BASELINE               | STATUS          |
+| :--------- | :--------------------- | :-------------------- | :--------------------- | :-------------- |
+| `EW-S1`    | `eron-client-sv`       | Client application    | SvelteKit / TypeScript | ● OPERATIONAL   |
+| `EW-S2`    | `eron-backend-csharp`  | Core services backend | .NET / C#              | ● OPERATIONAL   |
+
+---
+
+## 3 — SYSTEM RECORD · EW-S1
 
 <div align="center">
 
-## ▰▰▰  ORDER OF BATTLE  ▰▰▰
+### `eron-client-sv` — CLIENT APPLICATION
+
+![SvelteKit](https://img.shields.io/badge/SvelteKit-2d3436?style=flat-square&logo=svelte&logoColor=white)
+![Svelte 5](https://img.shields.io/badge/Svelte_5-2d3436?style=flat-square&logo=svelte&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-2d3436?style=flat-square&logo=typescript&logoColor=white)
+![SCSS](https://img.shields.io/badge/SCSS-2d3436?style=flat-square&logo=sass&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-2d3436?style=flat-square&logo=vite&logoColor=white)
+![pnpm](https://img.shields.io/badge/pnpm-2d3436?style=flat-square&logo=pnpm&logoColor=white)
+![Azure SWA](https://img.shields.io/badge/Azure_SWA-2d3436?style=flat-square&logo=microsoftazure&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2d3436?style=flat-square&logo=playwright&logoColor=white)
 
 </div>
 
-<!-- ════════════════════════════ DIVISION I ════════════════════════════ -->
-
-<div align="center">
-
-### 🛩️ DIVISION I · «VANGUARD»
-
-#### `eron-client-sv` — THE FRONT LINE
-
-![STATUS](https://img.shields.io/badge/STATUS-OPERATIONAL-4b5320?style=for-the-badge&labelColor=1b1b1b)
-![DEPLOY](https://img.shields.io/badge/DEPLOY-CONTINUOUS-556b2f?style=for-the-badge&labelColor=1b1b1b)
-![GATE](https://img.shields.io/badge/QUALITY_GATE-FORTIFIED-b8860b?style=for-the-badge&labelColor=1b1b1b)
-
-![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=for-the-badge&logo=svelte&logoColor=white&labelColor=1b1b1b)
-![Svelte 5](https://img.shields.io/badge/Svelte_5_·_Runes-FF3E00?style=for-the-badge&logo=svelte&logoColor=white&labelColor=1b1b1b)
-![TypeScript](https://img.shields.io/badge/TypeScript_·_strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white&labelColor=1b1b1b)
-![SCSS](https://img.shields.io/badge/SCSS_·_tokens-CC6699?style=for-the-badge&logo=sass&logoColor=white&labelColor=1b1b1b)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white&labelColor=1b1b1b)
-![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white&labelColor=1b1b1b)
-![Azure SWA](https://img.shields.io/badge/Azure_SWA-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white&labelColor=1b1b1b)
-![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white&labelColor=1b1b1b)
-
-</div>
-
-> **BRIEFING —** The forward-deployed web client: an auth-gated app launcher, native Dataverse surfaces (Reportes V2, Observaciones de Calidad V2), and the Trimble Sync dashboard. Spanish-first (es-ES), token-driven theming, hand-built for construction crews who deserve to feel VIP.
-
-| FIELD | INTEL |
-| :--- | :--- |
-| `CALLSIGN` | **VANGUARD** — 1st Interface Division |
-| `ROLE` | Forward web client — the cockpit the crews operate |
-| `THEATER` | Browser ▸ Azure Static Web Apps (SSR managed function) |
-| `ARMAMENT` | SvelteKit · Svelte 5 (runes) · TypeScript (strict) · SCSS (tokenized) |
-| `RECON & COMMS` | Microsoft Entra (OIDC/MSAL) · Dataverse · Microsoft Graph · Trimble Sync |
-| `FORTIFICATIONS` | Quality Gate — svelte-check · ESLint · Vitest · Playwright e2e + post-deploy Smoke |
-| `DEPLOYMENT` | CD via Azure SWA · doctrine `claude# → claude-master → preview → main` |
-| `CAMPAIGN` | `v0.4.0-alpha «Utzon»` — releases bear master-architect codenames |
-| `STRENGTH` | TypeScript **692k** · Svelte **636k** · SCSS **43k** |
-| `FWD BASE` | 🌐 [preview.eron.world](https://preview.eron.world) |
-| `READINESS` | 🟩 **OPERATIONAL** |
+| FIELD                   | RECORD                                                                                                  |
+| :---------------------- | :------------------------------------------------------------------------------------------------------ |
+| `DESIGNATOR`            | EW-S1                                                                                                    |
+| `REPOSITORY`            | `eron-client-sv`                                                                                         |
+| `FUNCTION`              | Authenticated web client — application launcher, native data surfaces (Reportes, Observaciones de Calidad), and Trimble synchronization dashboard. |
+| `OPERATING ENVIRONMENT` | Azure Static Web Apps (server-side rendering managed function)                                           |
+| `TECHNOLOGY BASELINE`   | SvelteKit · Svelte 5 (runes) · TypeScript (strict) · SCSS (tokenized) · Vite · pnpm                      |
+| `EXTERNAL INTERFACES`   | Microsoft Entra (OIDC / MSAL) · Microsoft Dataverse · Microsoft Graph · Trimble Connect                  |
+| `ASSURANCE`             | Mandatory quality gate — static analysis, lint, unit (Vitest), end-to-end (Playwright); post-deployment smoke verification. |
+| `CHANGE CONTROL`        | Sequential promotion: `claude# → claude-master → preview → main`                                         |
+| `RELEASE BASELINE`      | v0.4.0-alpha (codename UTZON)                                                                            |
+| `COMPOSITION`           | TypeScript 692k · Svelte 636k · SCSS 43k (bytes)                                                         |
+| `SERVICE ENDPOINT`      | [preview.eron.world](https://preview.eron.world)                                                        |
+| `OPERATIONAL STATUS`    | ● OPERATIONAL                                                                                            |
 
 ```
-[ VANGUARD // DEPLOYMENT BOARD ]
-  main ......... preview.eron.world .............................. ● LIVE
-  preview ...... staging slot (azurestaticapps) .................. ● LIVE
-  gate ......... svelte-check · eslint · vitest · playwright ..... ● ARMED
-  overwatch .... Claude · Copilot · Dependabot ................... ● STANDING
+EW-S1 // OPERATIONAL STATUS
+──────────────────────────────────────────────────────────────────────
+  PRODUCTION   preview.eron.world ........................... ● ONLINE
+  STAGING      preview slot ................................. ● ONLINE
+  ASSURANCE    static analysis · lint · unit · end-to-end ... ● ENFORCED
+  OVERSIGHT    automated review · dependency control ........ ● ACTIVE
+──────────────────────────────────────────────────────────────────────
 ```
 
 ---
 
-<!-- ════════════════════════════ DIVISION II ════════════════════════════ -->
+## 4 — SYSTEM RECORD · EW-S2
 
 <div align="center">
 
-### 🛡️ DIVISION II · «ARSENAL»
+### `eron-backend-csharp` — CORE SERVICES
 
-#### `eron-backend-csharp` — THE CORE
-
-![STATUS](https://img.shields.io/badge/STATUS-ACTIVE-4b5320?style=for-the-badge&labelColor=1b1b1b)
-![DEPLOY](https://img.shields.io/badge/DEPLOY-TRIPHASIC-556b2f?style=for-the-badge&labelColor=1b1b1b)
-![IAC](https://img.shields.io/badge/INFRA-BICEP_IaC-b8860b?style=for-the-badge&labelColor=1b1b1b)
-
-![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white&labelColor=1b1b1b)
-![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white&labelColor=1b1b1b)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white&labelColor=1b1b1b)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white&labelColor=1b1b1b)
-![Bicep](https://img.shields.io/badge/Bicep-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white&labelColor=1b1b1b)
-![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white&labelColor=1b1b1b)
-![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white&labelColor=1b1b1b)
+![.NET](https://img.shields.io/badge/.NET-2d3436?style=flat-square&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-2d3436?style=flat-square&logo=csharp&logoColor=white)
+![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-2d3436?style=flat-square&logo=dotnet&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2d3436?style=flat-square&logo=docker&logoColor=white)
+![Bicep](https://img.shields.io/badge/Bicep-2d3436?style=flat-square&logo=microsoftazure&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-2d3436?style=flat-square&logo=microsoftsqlserver&logoColor=white)
+![PowerShell](https://img.shields.io/badge/PowerShell-2d3436?style=flat-square&logo=powershell&logoColor=white)
 
 </div>
 
-> **BRIEFING —** The heavy artillery: a Clean Architecture .NET solution that owns the domain logic, the data, and the integration backbone. Dependencies point inward — `Domain` takes orders from no one; `Application` directs the campaign; `Infrastructure` runs the supply lines to Dataverse, SQL Server, Azure, and Trimble. Containerized and provisioned by code.
-
-| FIELD | INTEL |
-| :--- | :--- |
-| `CALLSIGN` | **ARSENAL** — 2nd Core Division |
-| `ROLE` | The core engine — domain logic, data & integration heavy artillery |
-| `THEATER` | Azure Cloud ▸ Docker containers |
-| `ARMAMENT` | .NET · C# · ASP.NET Core · Clean Architecture · Bicep IaC |
-| `ORDER OF BATTLE` | `Domain` ▸ `Application` ▸ `Api`, flanked by `Infrastructure.{Azure · Dataverse · SqlServer · Trimble}` |
-| `SUPPLY LINES` | Dataverse · SQL Server · Trimble Connect · Azure Services |
-| `FORTIFICATIONS` | CI · Quality gate · Bicep infra validation |
-| `DEPLOYMENT` | Triphasic — `Development` ▸ `Preview` ▸ `Production`, IaC-provisioned |
-| `STRENGTH` | C# **94k** · Bicep **10k** · PowerShell · Shell · Docker |
-| `READINESS` | 🟩 **ACTIVE — forward-deploying** |
+| FIELD                   | RECORD                                                                                                  |
+| :---------------------- | :------------------------------------------------------------------------------------------------------ |
+| `DESIGNATOR`            | EW-S2                                                                                                    |
+| `REPOSITORY`            | `eron-backend-csharp`                                                                                    |
+| `FUNCTION`              | Core services backend — domain logic, data custody, and the integration backbone for the platform.      |
+| `OPERATING ENVIRONMENT` | Azure Cloud · containerized (Docker)                                                                     |
+| `TECHNOLOGY BASELINE`   | .NET · C# · ASP.NET Core · Clean Architecture · Bicep (infrastructure as code)                           |
+| `SYSTEM COMPOSITION`    | `Domain` ▸ `Application` ▸ `Api`, with Infrastructure adapters: `Azure` · `Dataverse` · `SqlServer` · `Trimble` |
+| `EXTERNAL INTERFACES`   | Microsoft Dataverse · SQL Server · Trimble Connect · Azure Services                                      |
+| `ASSURANCE`             | Continuous integration · quality gate · infrastructure validation (Bicep)                               |
+| `DEPLOYMENT`            | Segregated environments — Development · Preview · Production (provisioned by code)                       |
+| `COMPOSITION`           | C# 94k · Bicep 10k · PowerShell · Shell · Docker (bytes)                                                 |
+| `OPERATIONAL STATUS`    | ● OPERATIONAL                                                                                            |
 
 ```
-[ ARSENAL // DEPLOYMENT BOARD ]
-  production ... Azure (Bicep-provisioned) ...................... ● HELD
-  preview ...... staging environment ........................... ● HELD
-  development .. dev environment ............................... ● HELD
-  gate ......... CI · quality · infra validation ............... ● ARMED
-  overwatch .... Claude · CI sentries .......................... ● STANDING
+EW-S2 // OPERATIONAL STATUS
+──────────────────────────────────────────────────────────────────────
+  PRODUCTION    Azure (provisioned by code) ................. ● ONLINE
+  PREVIEW       staging environment ........................ ● ONLINE
+  DEVELOPMENT   development environment .................... ● ONLINE
+  ASSURANCE     CI · quality gate · infrastructure check .... ● ENFORCED
+  OVERSIGHT     automated review ........................... ● ACTIVE
+──────────────────────────────────────────────────────────────────────
 ```
 
 ---
 
-## ⚙ COMBINED ARMS — BATTLE MAP
+## 5 — SYSTEM ARCHITECTURE & DATA FLOW
 
 ```mermaid
 flowchart LR
-    crews(["👷 Field Crews &amp; Command"]):::ops
+    users(["Authorized Users"]):::ext
 
-    subgraph FRONT["🛩️ DIVISION I · VANGUARD — eron-client-sv"]
+    subgraph S1["EW-S1 · eron-client-sv"]
         direction TB
-        swa["SvelteKit SSR<br/>Azure Static Web Apps"]
-        ui["Launcher · Reportes V2<br/>Observaciones V2 · Trimble Sync"]
-        swa --> ui
+        swa["Web Client<br/>Azure Static Web Apps"]
+        surf["Launcher · Reportes · Observaciones · Trimble Sync"]
+        swa --> surf
     end
 
-    subgraph CORE["🛡️ DIVISION II · ARSENAL — eron-backend-csharp"]
+    subgraph S2["EW-S2 · eron-backend-csharp"]
         direction TB
         api["Eron.Api<br/>ASP.NET Core"]
         app["Eron.Application"]
@@ -160,7 +154,7 @@ flowchart LR
         api --> app --> dom
     end
 
-    subgraph SUPPLY["📡 SUPPLY LINES — Infrastructure"]
+    subgraph INFRA["INFRASTRUCTURE"]
         direction TB
         dv[("Dataverse")]
         sql[("SQL Server")]
@@ -168,44 +162,45 @@ flowchart LR
         az["Azure Services"]
     end
 
-    entra{{"🛡️ Microsoft Entra · OIDC / MSAL"}}
+    idp{{"Microsoft Entra · OIDC / MSAL"}}
 
-    crews -->|HTTPS| swa
-    ui -->|API| api
+    users -->|HTTPS| swa
+    surf -->|API| api
     app --> dv & sql & tc & az
-    entra -. guards .-> swa
-    entra -. guards .-> api
+    idp -. authenticates .-> swa
+    idp -. authenticates .-> api
 
-    classDef ops fill:#4b5320,stroke:#b8860b,color:#ffffff,stroke-width:2px;
-    style FRONT fill:#1b1b1b,stroke:#556b2f,color:#fff
-    style CORE fill:#1b1b1b,stroke:#556b2f,color:#fff
-    style SUPPLY fill:#1b1b1b,stroke:#2f4f4f,color:#fff
+    classDef ext fill:#3a3a3a,stroke:#111,color:#fff;
+    style S1 fill:#161616,stroke:#555,color:#eee
+    style S2 fill:#161616,stroke:#555,color:#eee
+    style INFRA fill:#161616,stroke:#555,color:#eee
 ```
 
 ---
 
-## 🎖 RULES OF ENGAGEMENT
+## 6 — SECURITY & GOVERNANCE CONTROLS
 
-- **Language of command** — all client-facing comms in **es-ES** (Spanish, Spain). Direct, professional, no fluff.
-- **No breach without clearance** — nothing merges past a **fortified quality gate** (type-check, lint, unit, build, e2e).
-- **Branch doctrine** — advance `claude# → claude-master → preview → main`. Never flank straight to `main`.
-- **Standing overwatch** — Claude & Copilot stand review; Dependabot guards the supply chain.
-- **Architecture is doctrine** — tokens over hex, runes over legacy, dependencies point inward.
+- **ACCESS** — system repositories are private; access is granted by role.
+- **CHANGE CONTROL** — no change reaches production without passing the mandatory quality gate.
+- **AUTHORIZATION CHAIN** — promotion is sequential and gated; direct commits to production-bearing branches are prohibited.
+- **AUTOMATED OVERSIGHT** — automated code review and dependency monitoring apply to all changes.
+- **DATA HANDLING** — no personal data is carried in URLs or telemetry without explicit authorization; users are identified by opaque directory identifiers only.
+- **LANGUAGE OF RECORD** — client communications are standardized to es-ES.
+
+---
+
+## 7 — POINTS OF CONTACT
+
+| ROLE                                | NAME            | DIRECTORY                                  |
+| :---------------------------------- | :-------------- | :----------------------------------------- |
+| System Owner / Technical Authority  | Gabriel Barnada | [@glovek08](https://github.com/glovek08)   |
 
 ---
 
 <div align="center">
 
-### ⭐ CHAIN OF COMMAND ⭐
+![UNCLASSIFIED // ERON WORLD // FOR OFFICIAL USE ONLY](https://img.shields.io/badge/UNCLASSIFIED%20%2F%2F%20ERON%20WORLD%20%2F%2F%20FOR%20OFFICIAL%20USE%20ONLY-007a33?style=for-the-badge&labelColor=007a33)
 
-**Commanding Officer —** [@glovek08](https://github.com/glovek08) · Gabriel Barnada
-
-<br/>
-
-![CONSTRUCTION](https://img.shields.io/badge/●_BUILDING_THE_FUTURE_OF_CONSTRUCTION-1b1b1b?style=for-the-badge&labelColor=4b5320)
-
-`— END OF BRIEFING —`
-
-▰▰▰▱▱  **ERON WORLD** · DIGITAL OPERATIONS  ▱▱▰▰▰
+`END OF DOCUMENT — EW-SR-001`
 
 </div>
