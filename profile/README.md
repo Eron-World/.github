@@ -1,206 +1,148 @@
 <div align="center">
 
-![UNCLASSIFIED // ERON WORLD // FOR OFFICIAL USE ONLY](https://img.shields.io/badge/UNCLASSIFIED%20%2F%2F%20ERON%20WORLD%20%2F%2F%20FOR%20OFFICIAL%20USE%20ONLY-007a33?style=for-the-badge&labelColor=007a33)
+<img src="assets/eron_logo_small.svg" alt="Eron World" width="104" />
 
-# ERON WORLD
+# Eron World
 
-### CENTRAL SYSTEMS DIVISION
+**Digitaliza tu obra** — a B2B construction-management platform for Spanish-speaking teams.
 
-**DIGITAL OPERATIONS — CONSTRUCTION MANAGEMENT PLATFORM**
-
-![PROGRAM](https://img.shields.io/badge/PROGRAM-ACTIVE-007a33?style=for-the-badge&labelColor=1f1f1f)
-![ENVIRONMENT](https://img.shields.io/badge/ENVIRONMENT-AZURE_CLOUD-2d3436?style=for-the-badge&labelColor=1f1f1f)
-![AUTHORIZATION](https://img.shields.io/badge/AUTHORIZATION_TO_OPERATE-CURRENT-007a33?style=for-the-badge&labelColor=1f1f1f)
-
-</div>
-
-```
-DOCUMENT CONTROL
-──────────────────────────────────────────────────────────────────────
-  DOCUMENT ............ Platform Systems Register
-  DESIGNATOR .......... EW-SR-001
-  REVISION ............ 2026.06 (REV C)
-  PREPARING OFFICE .... Central Systems Division
-  AUTHORITY ........... Office of the Chief Engineer
-  DISTRIBUTION ........ Internal. Repository access governed by role.
-  CLASSIFICATION ...... UNCLASSIFIED // FOR OFFICIAL USE ONLY
-──────────────────────────────────────────────────────────────────────
-```
-
----
-
-## 1 — PROGRAM OVERVIEW
-
-The Central Systems Division maintains the digital platform supporting Eron World's B2B construction-management operations. The standing mandate is the orderly decommission of the legacy Power Platform portal and the establishment of a sovereign, cloud-native successor on Microsoft Azure.
-
-The platform is recorded as two systems: a client-facing application (**EW-S1**) and a core services backend (**EW-S2**). Both are under active development, governed by mandatory assurance gates, and deployed under change control.
-
----
-
-## 2 — SYSTEM INVENTORY
-
-| DESIGNATOR | SYSTEM                 | FUNCTION              | BASELINE               | STATUS          |
-| :--------- | :--------------------- | :-------------------- | :--------------------- | :-------------- |
-| `EW-S1`    | `eron-client-sv`       | Client application    | SvelteKit / TypeScript | ● OPERATIONAL   |
-| `EW-S2`    | `eron-backend-csharp`  | Core services backend | .NET / C#              | ● OPERATIONAL   |
-
----
-
-## 3 — SYSTEM RECORD · EW-S1
-
-<div align="center">
-
-### `eron-client-sv` — CLIENT APPLICATION
-
-![SvelteKit](https://img.shields.io/badge/SvelteKit-2d3436?style=flat-square&logo=svelte&logoColor=white)
-![Svelte 5](https://img.shields.io/badge/Svelte_5-2d3436?style=flat-square&logo=svelte&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-2d3436?style=flat-square&logo=typescript&logoColor=white)
-![SCSS](https://img.shields.io/badge/SCSS-2d3436?style=flat-square&logo=sass&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-2d3436?style=flat-square&logo=vite&logoColor=white)
-![pnpm](https://img.shields.io/badge/pnpm-2d3436?style=flat-square&logo=pnpm&logoColor=white)
-![Azure SWA](https://img.shields.io/badge/Azure_SWA-2d3436?style=flat-square&logo=microsoftazure&logoColor=white)
-![Playwright](https://img.shields.io/badge/Playwright-2d3436?style=flat-square&logo=playwright&logoColor=white)
+[![Status](https://img.shields.io/badge/status-active_development-4ba792?style=flat-square)](https://github.com/Eron-World)
+[![Stage](https://img.shields.io/badge/stage-alpha-4ba792?style=flat-square)](https://github.com/Eron-World)
+[![Cloud](https://img.shields.io/badge/cloud-Microsoft_Azure-0078D4?style=flat-square)](https://azure.microsoft.com)
+![Product](https://img.shields.io/badge/product_language-es--ES-555?style=flat-square)
+[![License](https://img.shields.io/badge/license-proprietary-555?style=flat-square)](#license)
 
 </div>
 
-| FIELD                   | RECORD                                                                                                  |
-| :---------------------- | :------------------------------------------------------------------------------------------------------ |
-| `DESIGNATOR`            | EW-S1                                                                                                    |
-| `REPOSITORY`            | `eron-client-sv`                                                                                         |
-| `FUNCTION`              | Authenticated web client — application launcher, native data surfaces (Reportes, Observaciones de Calidad), and Trimble synchronization dashboard. |
-| `OPERATING ENVIRONMENT` | Azure Static Web Apps (server-side rendering managed function)                                           |
-| `TECHNOLOGY BASELINE`   | SvelteKit · Svelte 5 (runes) · TypeScript (strict) · SCSS (tokenized) · Vite · pnpm                      |
-| `EXTERNAL INTERFACES`   | Microsoft Entra (OIDC / MSAL) · Microsoft Dataverse · Microsoft Graph · Trimble Connect                  |
-| `ASSURANCE`             | Mandatory quality gate — static analysis, lint, unit (Vitest), end-to-end (Playwright); post-deployment smoke verification. |
-| `CHANGE CONTROL`        | Sequential promotion: `claude# → claude-master → preview → main`                                         |
-| `RELEASE BASELINE`      | v0.4.0-alpha (codename UTZON)                                                                            |
-| `COMPOSITION`           | TypeScript 692k · Svelte 636k · SCSS 43k (bytes)                                                         |
-| `SERVICE ENDPOINT`      | [preview.eron.world](https://preview.eron.world)                                                        |
-| `OPERATIONAL STATUS`    | ● OPERATIONAL                                                                                            |
+---
 
-```
-EW-S1 // OPERATIONAL STATUS
-──────────────────────────────────────────────────────────────────────
-  PRODUCTION   preview.eron.world ........................... ● ONLINE
-  STAGING      preview slot ................................. ● ONLINE
-  ASSURANCE    static analysis · lint · unit · end-to-end ... ● ENFORCED
-  OVERSIGHT    automated review · dependency control ........ ● ACTIVE
-──────────────────────────────────────────────────────────────────────
-```
+## What we build
+
+Eron World is a construction-management SaaS for site teams — reporting, quality observations, and BIM data, in one authenticated workspace.
+
+The platform began on **Microsoft Power Platform** (Power Pages portal + PowerApps Canvas apps + Dataverse) and is being migrated to a **native, cloud-native stack on Azure**: a SvelteKit web client and a C#/.NET backend, with a dedicated service that syncs Trimble Connect BIM data into the platform. Power Platform surfaces are rebuilt natively one by one and decommissioned as they reach parity.
 
 ---
 
-## 4 — SYSTEM RECORD · EW-S2
+## Repositories
 
-<div align="center">
+| Repository | What it does | Stack | Status |
+| :--------- | :----------- | :---- | :----- |
+| [**eron-client-sv**](https://github.com/Eron-World/eron-client-sv) | User-facing web client — auth gate, app launcher, and native data surfaces (Reportes, Observaciones de Calidad, Trimble Sync). | SvelteKit · Svelte 5 · TypeScript | ![](https://img.shields.io/badge/-deployed-4ba792?style=flat-square) `v0.4.3-alpha` |
+| [**eron-backend-csharp**](https://github.com/Eron-World/eron-backend-csharp) | REST API backend — domain logic and the data layer migrating off Dataverse to Azure SQL. | .NET 10 · C# · ASP.NET Core | ![](https://img.shields.io/badge/-in_development-f59e0b?style=flat-square) `0.1.0-alpha` |
+| [**eron-trimble-connect-adapter**](https://github.com/Eron-World/eron-trimble-connect-adapter) | Bidirectional sync between Trimble Connect BIM data and Dataverse, with an admin portal. | Azure Functions · .NET 10 · React | ![](https://img.shields.io/badge/-in_development-f59e0b?style=flat-square) |
 
-### `eron-backend-csharp` — CORE SERVICES
+> Repositories are **private**; the links resolve for members. Access is granted by role.
 
-![.NET](https://img.shields.io/badge/.NET-2d3436?style=flat-square&logo=dotnet&logoColor=white)
-![C#](https://img.shields.io/badge/C%23-2d3436?style=flat-square&logo=csharp&logoColor=white)
-![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-2d3436?style=flat-square&logo=dotnet&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2d3436?style=flat-square&logo=docker&logoColor=white)
-![Bicep](https://img.shields.io/badge/Bicep-2d3436?style=flat-square&logo=microsoftazure&logoColor=white)
-![SQL Server](https://img.shields.io/badge/SQL_Server-2d3436?style=flat-square&logo=microsoftsqlserver&logoColor=white)
-![PowerShell](https://img.shields.io/badge/PowerShell-2d3436?style=flat-square&logo=powershell&logoColor=white)
+### eron-client-sv — web client
 
-</div>
+[![SvelteKit](https://img.shields.io/badge/SvelteKit-FF3E00?style=flat-square&logo=svelte&logoColor=white)](https://kit.svelte.dev)
+[![Svelte 5](https://img.shields.io/badge/Svelte_5_(runes)-FF3E00?style=flat-square&logo=svelte&logoColor=white)](https://svelte.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
+[![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)](https://sass-lang.com)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
+[![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white)](https://pnpm.io)
+[![Azure SWA](https://img.shields.io/badge/Azure_SWA-0078D4?style=flat-square)](https://azure.microsoft.com/products/app-service/static)
+[![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square)](https://playwright.dev)
 
-| FIELD                   | RECORD                                                                                                  |
-| :---------------------- | :------------------------------------------------------------------------------------------------------ |
-| `DESIGNATOR`            | EW-S2                                                                                                    |
-| `REPOSITORY`            | `eron-backend-csharp`                                                                                    |
-| `FUNCTION`              | Core services backend — domain logic, data custody, and the integration backbone for the platform.      |
-| `OPERATING ENVIRONMENT` | Azure Cloud · containerized (Docker)                                                                     |
-| `TECHNOLOGY BASELINE`   | .NET · C# · ASP.NET Core · Clean Architecture · Bicep (infrastructure as code)                           |
-| `SYSTEM COMPOSITION`    | `Domain` ▸ `Application` ▸ `Api`, with Infrastructure adapters: `Azure` · `Dataverse` · `SqlServer` · `Trimble` |
-| `EXTERNAL INTERFACES`   | Microsoft Dataverse · SQL Server · Trimble Connect · Azure Services                                      |
-| `ASSURANCE`             | Continuous integration · quality gate · infrastructure validation (Bicep)                               |
-| `DEPLOYMENT`            | Segregated environments — Development · Preview · Production (provisioned by code)                       |
-| `COMPOSITION`           | C# 94k · Bicep 10k · PowerShell · Shell · Docker (bytes)                                                 |
-| `OPERATIONAL STATUS`    | ● OPERATIONAL                                                                                            |
+Authenticated client on Azure Static Web Apps. Sign-in via Microsoft Entra (OIDC/MSAL), app catalog from Dataverse, transactional email through Microsoft Graph. Native surfaces: **Reportes V2** (read-only tables + charts), **Observaciones de Calidad V2** (closure workflow with row-level security), and the **Trimble Sync** dashboard.
 
-```
-EW-S2 // OPERATIONAL STATUS
-──────────────────────────────────────────────────────────────────────
-  PRODUCTION    Azure (provisioned by code) ................. ● ONLINE
-  PREVIEW       staging environment ........................ ● ONLINE
-  DEVELOPMENT   development environment .................... ● ONLINE
-  ASSURANCE     CI · quality gate · infrastructure check .... ● ENFORCED
-  OVERSIGHT     automated review ........................... ● ACTIVE
-──────────────────────────────────────────────────────────────────────
-```
+### eron-backend-csharp — REST API
+
+[![.NET](https://img.shields.io/badge/.NET_10-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com)
+[![C#](https://img.shields.io/badge/C%23-512BD4?style=flat-square)](https://learn.microsoft.com/dotnet/csharp)
+[![ASP.NET Core](https://img.shields.io/badge/ASP.NET_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/apps/aspnet)
+[![EF Core](https://img.shields.io/badge/EF_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://learn.microsoft.com/ef/core)
+[![Azure SQL](https://img.shields.io/badge/Azure_SQL-CC2927?style=flat-square)](https://azure.microsoft.com/products/azure-sql)
+[![Container Apps](https://img.shields.io/badge/Container_Apps-0078D4?style=flat-square)](https://azure.microsoft.com/products/container-apps)
+[![Bicep](https://img.shields.io/badge/Bicep-0078D4?style=flat-square)](https://learn.microsoft.com/azure/azure-resource-manager/bicep)
+
+Clean-architecture solution (`Domain` ▸ `Application` ▸ `Api`) with swappable infrastructure adapters (`Azure` · `Dataverse` · `SqlServer` · `Trimble`). Today it adapts Dataverse; persistence is migrating to Azure SQL behind stable ports. Infrastructure is provisioned as code (Bicep) across development, preview, and production.
+
+### eron-trimble-connect-adapter — BIM sync
+
+[![.NET](https://img.shields.io/badge/.NET_10-512BD4?style=flat-square&logo=dotnet&logoColor=white)](https://dotnet.microsoft.com)
+[![Azure Functions](https://img.shields.io/badge/Azure_Functions-0062AD?style=flat-square)](https://azure.microsoft.com/products/functions)
+[![React](https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
+[![Trimble Connect](https://img.shields.io/badge/Trimble_Connect-0063A3?style=flat-square&logo=trimble&logoColor=white)](https://connect.trimble.com)
+
+Azure Functions v4 backend with a React/Vite admin portal. Keeps BIM objects from Trimble Connect in sync with Dataverse via transparent PKCE auth, so model data is available to the rest of the platform.
 
 ---
 
-## 5 — SYSTEM ARCHITECTURE & DATA FLOW
+## Architecture
 
 ```mermaid
 flowchart LR
-    users(["Authorized Users"]):::ext
+    users(["Site teams"])
 
-    subgraph S1["EW-S1 · eron-client-sv"]
-        direction TB
-        swa["Web Client<br/>Azure Static Web Apps"]
-        surf["Launcher · Reportes · Observaciones · Trimble Sync"]
-        swa --> surf
+    subgraph client["eron-client-sv"]
+        web["Web client<br/>Azure Static Web Apps"]
     end
 
-    subgraph S2["EW-S2 · eron-backend-csharp"]
-        direction TB
-        api["Eron.Api<br/>ASP.NET Core"]
-        app["Eron.Application"]
-        dom["Eron.Domain"]
-        api --> app --> dom
+    subgraph backend["eron-backend-csharp"]
+        api["REST API<br/>ASP.NET Core"]
     end
 
-    subgraph INFRA["INFRASTRUCTURE"]
-        direction TB
-        dv[("Dataverse")]
-        sql[("SQL Server")]
-        tc["Trimble Connect"]
-        az["Azure Services"]
+    subgraph sync["eron-trimble-connect-adapter"]
+        fn["Azure Functions"]
     end
 
-    idp{{"Microsoft Entra · OIDC / MSAL"}}
+    entra{{"Microsoft Entra · OIDC / MSAL"}}
+    dv[("Dataverse")]
+    sql[("Azure SQL")]
+    tc["Trimble Connect"]
 
-    users -->|HTTPS| swa
-    surf -->|API| api
-    app --> dv & sql & tc & az
-    idp -. authenticates .-> swa
-    idp -. authenticates .-> api
-
-    classDef ext fill:#3a3a3a,stroke:#111,color:#fff;
-    style S1 fill:#161616,stroke:#555,color:#eee
-    style S2 fill:#161616,stroke:#555,color:#eee
-    style INFRA fill:#161616,stroke:#555,color:#eee
+    users -->|HTTPS| web
+    web -->|API| api
+    api --> dv & sql
+    fn <-->|sync| tc
+    fn --> dv
+    entra -. authenticates .-> web
+    entra -. authenticates .-> api
 ```
 
 ---
 
-## 6 — SECURITY & GOVERNANCE CONTROLS
+## Roadmap
 
-- **ACCESS** — system repositories are private; access is granted by role.
-- **CHANGE CONTROL** — no change reaches production without passing the mandatory quality gate.
-- **AUTHORIZATION CHAIN** — promotion is sequential and gated; direct commits to production-bearing branches are prohibited.
-- **AUTOMATED OVERSIGHT** — automated code review and dependency monitoring apply to all changes.
-- **DATA HANDLING** — no personal data is carried in URLs or telemetry without explicit authorization; users are identified by opaque directory identifiers only.
-- **LANGUAGE OF RECORD** — client communications are standardized to es-ES.
+Tracked on the private [project board](https://github.com/orgs/Eron-World/projects/2). Highlights:
+
+**Shipped**
+- Authentication gate (Microsoft Entra / MSAL) with invite flow
+- App launcher embedding the legacy PowerApps Canvas apps
+- **Reportes V2** — native rebuild with charts and PDF/Excel export
+- **Observaciones de Calidad V2** — native closure workflow with row-level security
+- **Trimble Sync** — read-only sync dashboard
+- Custom domains, production + preview deployments, SEO/indexing
+- C#/.NET backend foundation (clean architecture, backend-driven OAuth)
+
+**In progress**
+- Data-layer migration: Dataverse → Azure SQL behind stable ports
+- Backend-driven authentication and a clean RFC 9457 `problem+json` API contract
+
+**Next**
+- Decommission the legacy Power Pages portal once native parity is reached
+- Validate the native rebuilds against the legacy Canvas apps (performance, UX, velocity)
+- Trimble Sync write surface (property CRUD)
 
 ---
 
-## 7 — POINTS OF CONTACT
+## Engineering standards
 
-| ROLE                                | NAME            | DIRECTORY                                  |
-| :---------------------------------- | :-------------- | :----------------------------------------- |
-| System Owner / Technical Authority  | Gabriel Barnada | [@glovek08](https://github.com/glovek08)   |
+- **Gated CI** — no change reaches production without passing the quality gate (type-check, lint, unit, end-to-end), followed by post-deploy smoke checks.
+- **Change control** — promotion is sequential and gated; direct pushes to production branches are not allowed.
+- **Automated review** — every change goes through automated code review and dependency monitoring.
+- **Privacy** — no personal data in URLs or telemetry; users are identified by opaque directory IDs.
+- **Language** — all user-facing copy is **es-ES** (Spain Spanish).
 
 ---
 
-<div align="center">
+## License
 
-![UNCLASSIFIED // ERON WORLD // FOR OFFICIAL USE ONLY](https://img.shields.io/badge/UNCLASSIFIED%20%2F%2F%20ERON%20WORLD%20%2F%2F%20FOR%20OFFICIAL%20USE%20ONLY-007a33?style=for-the-badge&labelColor=007a33)
+Proprietary. © Eron World. All rights reserved unless a repository states otherwise.
 
-`END OF DOCUMENT — EW-SR-001`
+## Maintainer
 
-</div>
+**Gabriel Barnada** — [@glovek08](https://github.com/glovek08) · [eron.world](https://eron.world)
