@@ -28,7 +28,7 @@ The platform began on **Microsoft Power Platform** (Power Pages portal + PowerAp
 
 | Repository | What it does | Stack | Status |
 | :--------- | :----------- | :---- | :----- |
-| [**eron-client-sv**](https://github.com/Eron-World/eron-client-sv) | User-facing web client — auth gate, app launcher, and native data surfaces (Reportes, Observaciones de Calidad, Trimble Sync). | SvelteKit · Svelte 5 · TypeScript | ![](https://img.shields.io/badge/-deployed-4ba792?style=flat-square) `v0.4.3-alpha` |
+| [**eron-client-sv**](https://github.com/Eron-World/eron-client-sv) | User-facing web client — auth gate, app launcher, and native data surfaces (Reportes, Observaciones de Calidad, Trimble Sync). | SvelteKit · Svelte 5 · TypeScript | ![](https://img.shields.io/badge/-deployed-4ba792?style=flat-square) `v0.4.9.0-alpha` |
 | [**eron-backend-csharp**](https://github.com/Eron-World/eron-backend-csharp) | REST API backend — domain logic and the data layer migrating off Dataverse to Azure SQL. | .NET 10 · C# · ASP.NET Core | ![](https://img.shields.io/badge/-in_development-f59e0b?style=flat-square) `0.1.0-alpha` |
 | [**eron-trimble-connect-adapter**](https://github.com/Eron-World/eron-trimble-connect-adapter) | Bidirectional sync between Trimble Connect BIM data and Dataverse, with an admin portal. | Azure Functions · .NET 10 · React | ![](https://img.shields.io/badge/-in_development-f59e0b?style=flat-square) |
 
@@ -42,10 +42,10 @@ The platform began on **Microsoft Power Platform** (Power Pages portal + PowerAp
 [![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat-square&logo=sass&logoColor=white)](https://sass-lang.com)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev)
 [![pnpm](https://img.shields.io/badge/pnpm-F69220?style=flat-square&logo=pnpm&logoColor=white)](https://pnpm.io)
-[![Azure SWA](https://img.shields.io/badge/Azure_SWA-0078D4?style=flat-square)](https://azure.microsoft.com/products/app-service/static)
+[![Container Apps](https://img.shields.io/badge/Container_Apps-0078D4?style=flat-square)](https://azure.microsoft.com/products/container-apps)
 [![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat-square)](https://playwright.dev)
 
-Authenticated client on Azure Static Web Apps. Sign-in via Microsoft Entra (OIDC/MSAL), app catalog from Dataverse, transactional email through Microsoft Graph. Native surfaces: **Reportes V2** (read-only tables + charts), **Observaciones de Calidad V2** (closure workflow with row-level security), and the **Trimble Sync** dashboard.
+Authenticated SSR client on Azure Container Apps (production + preview stages). Sign-in via Microsoft Entra (OIDC/MSAL), app catalog from Dataverse, transactional email through Microsoft Graph. Native surfaces: **Reportes V2** (read-only tables + charts), **Observaciones de Calidad V2** (closure workflow with row-level security), and the **Trimble Sync** dashboard.
 
 ### eron-backend-csharp — REST API
 
@@ -75,32 +75,49 @@ Azure Functions v4 backend with a React/Vite admin portal. Keeps BIM objects fro
 
 ```mermaid
 flowchart LR
-    users(["Site teams"])
+    users(["Site teams<br/>mobile · desktop"])
 
-    subgraph client["eron-client-sv"]
-        web["Web client<br/>Azure Static Web Apps"]
+    subgraph aca["Azure Container Apps · prod + preview stages"]
+        direction TB
+        web["eron-client-sv<br/>SvelteKit SSR<br/>www.eron.world · preview.eron.world"]
+        api["eron-backend-csharp<br/>ASP.NET Core REST API"]
     end
 
-    subgraph backend["eron-backend-csharp"]
-        api["REST API<br/>ASP.NET Core"]
+    subgraph adapter["eron-trimble-connect-adapter"]
+        direction TB
+        admin["Admin portal · React"]
+        fn["Sync service · Azure Functions"]
     end
 
-    subgraph sync["eron-trimble-connect-adapter"]
-        fn["Azure Functions"]
+    subgraph tc["Trimble Connect"]
+        bim["BIM models"]
+        pbi["Power BI insights panel"]
     end
 
-    entra{{"Microsoft Entra · OIDC / MSAL"}}
-    dv[("Dataverse")]
-    sql[("Azure SQL")]
-    tc["Trimble Connect"]
+    entra{{"Microsoft Entra ID<br/>OIDC · MSAL"}}
+    msgraph{{"Microsoft Graph<br/>transactional email"}}
+    dv[("Dataverse<br/>transitional store")]
+    sql[("Azure SQL<br/>migration target")]
+    legacy["Legacy PowerApps<br/>Canvas apps · being retired"]
+    ai[["Application Insights<br/>RUM · availability · APM"]]
 
     users -->|HTTPS| web
-    web -->|API| api
-    api --> dv & sql
-    fn <-->|sync| tc
+    web -->|REST · problem+json| api
+    web --> dv
+    web -.->|iframe launcher| legacy
+    web -->|invites| msgraph
+    legacy --> dv
+    api --> dv
+    api --> sql
+    dv -.->|data migration| sql
+    admin --> fn
+    fn <-->|bidirectional sync| bim
     fn --> dv
-    entra -. authenticates .-> web
-    entra -. authenticates .-> api
+    entra -.->|auth| web
+    entra -.->|auth| api
+    web -.->|telemetry| ai
+    api -.->|telemetry| ai
+    fn -.->|telemetry| ai
 ```
 
 ---
